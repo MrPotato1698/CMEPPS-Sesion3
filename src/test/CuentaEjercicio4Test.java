@@ -36,15 +36,25 @@ class CuentaEjercicio4Test {
 
 	@Test
 	void testCuenta12345() {
+		ctapruebas1.retirar(200);
+		ctapruebas1.ingresar(100);
+		ctapruebas1.retirar(200);
+
 		saldofinal1 = -250;
-		assertEquals(-250, saldofinal1);
+		assertEquals(saldofinal1, ctapruebas1.getSaldo());
 		
 	}
 
 	@Test
 	void testCuenta67890() {
+		ctapruebas6.retirar(350);
+		ctapruebas6.retirar(200);
+		ctapruebas6.retirar(150);
+		ctapruebas6.ingresar(50);
+		ctapruebas6.retirar(100);
+
 		saldofinal6 = -450;
-		assertEquals(-450, saldofinal6);
+		assertEquals(saldofinal6, ctapruebas6.getSaldo());
 	}
 
 }
