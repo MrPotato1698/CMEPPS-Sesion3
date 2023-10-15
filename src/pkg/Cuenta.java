@@ -5,12 +5,12 @@ public class Cuenta {
 	private double saldo;
 	private String numero;
 	private String titular;
-	
+
 	public Cuenta(double s) {
 		super();
 		this.saldo = s;
 	}
-	
+
 	public String getNumero() {
 		return numero;
 	}
@@ -26,11 +26,11 @@ public class Cuenta {
 	public void setTitular(String titular) {
 		this.titular = titular;
 	}
-	
+
 	public double getSaldo() {
 		return this.saldo;
 	}
-	
+
 	public void setSaldo(double s) {
 		this.saldo = s;
 	}
@@ -40,6 +40,9 @@ public class Cuenta {
 	}
 
 	public void retirar(double i) {
-		this.setSaldo(this.getSaldo() - i);
+		double saldoproximo=this.getSaldo()-i;
+		if (saldoproximo >= -500) {
+			this.setSaldo(saldoproximo);
+		}
 	}
 }

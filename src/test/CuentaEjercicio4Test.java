@@ -33,18 +33,7 @@ class CuentaEjercicio4Test {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
-	@Test
-	void testCuenta12345() {
-		ctapruebas1.retirar(200);
-		ctapruebas1.ingresar(100);
-		ctapruebas1.retirar(200);
-
-		saldofinal1 = -250;
-		assertEquals(saldofinal1, ctapruebas1.getSaldo());
-		
-	}
-
+	
 	@Test
 	void testCuenta67890() {
 		ctapruebas6.retirar(350);
@@ -55,6 +44,17 @@ class CuentaEjercicio4Test {
 
 		saldofinal6 = -450;
 		assertEquals(saldofinal6, ctapruebas6.getSaldo());
+	}
+
+	@Test
+	void testCuenta12345() {
+		ctapruebas1.retirar(200);
+		ctapruebas1.ingresar(100);
+		ctapruebas1.retirar(200);
+
+		saldofinal1 = -250;
+		assertEquals(saldofinal1, ctapruebas1.getSaldo());
+		
 	}
 
 }
